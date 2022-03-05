@@ -1,7 +1,10 @@
 import { HeaderHeightContext } from "@react-navigation/elements";
 import * as React from "react";
 import { ScrollView, StatusBar, StyleSheet } from "react-native";
-import { SafeAreaView } from "react-native-safe-area-context";
+import {
+  SafeAreaView,
+  useSafeAreaInsets
+} from "react-native-safe-area-context";
 import ScreenBackground from "../style-system/screen-background";
 import Text from "../style-system/text";
 
@@ -13,8 +16,14 @@ const styles = StyleSheet.create({
 });
 
 function Home(): JSX.Element {
+  const insets = useSafeAreaInsets();
+
   return (
-    <ScreenBackground color1="backgroundGradient1" color2="backgroundGradient2">
+    <ScreenBackground
+      color1="backgroundGradient1"
+      color2="backgroundGradient2"
+      color3="buttonPrimaryBackground"
+    >
       <SafeAreaView edges={["right", "left"]} style={styles.container}>
         <StatusBar barStyle="light-content" />
         <HeaderHeightContext.Consumer>
@@ -22,6 +31,9 @@ function Home(): JSX.Element {
             <ScrollView
               style={{
                 marginTop: headerHeight
+              }}
+              contentContainerStyle={{
+                paddingBottom: insets.bottom
               }}
               indicatorStyle="white"
             >

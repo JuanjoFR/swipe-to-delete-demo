@@ -13,23 +13,31 @@ const style = StyleSheet.create({
 type Props = {
   color1: keyof Theme["colors"];
   color2: keyof Theme["colors"];
+  color3: keyof Theme["colors"];
   children: JSX.Element;
 };
 
-function Home({ color1, color2, children }: Props): JSX.Element {
+function Home({ color1, color2, color3, children }: Props): JSX.Element {
   const theme = useTheme<Theme>();
 
   return (
     <LinearGradient
-      start={{ x: 0.2, y: 0.2 }}
-      end={{ x: 1, y: 1.0 }}
-      colors={[
-        hexToRgba(theme.colors[color2], "0"),
-        hexToRgba(theme.colors[color2], "0.5")
-      ]}
-      style={[style.container, { backgroundColor: theme.colors[color1] }]}
+      start={{ x: 0.5, y: 0 }}
+      end={{ x: 0.5, y: 0.5 }}
+      colors={[theme.colors[color1], theme.colors[color2]]}
+      style={style.container}
     >
-      {children}
+      <LinearGradient
+        start={{ x: 0.2, y: 0.2 }}
+        end={{ x: 1, y: 1.0 }}
+        colors={[
+          hexToRgba(theme.colors[color3], "0"),
+          hexToRgba(theme.colors[color3], "0.2")
+        ]}
+        style={[style.container, { backgroundColor: theme.colors[color1] }]}
+      >
+        {children}
+      </LinearGradient>
     </LinearGradient>
   );
 }
