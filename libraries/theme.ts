@@ -14,7 +14,7 @@ const palette = {
   // primary: "#350D37",
   black: "#000",
   white: "#FFF",
-  gray1: "#DDDDDD",
+  gray1: "#8A8C98",
   gray2: "#606060",
   gray3: "#868686",
   gray4: "#616061",
@@ -24,9 +24,10 @@ const theme = createTheme({
   colors: {
     backgroundGradient1: palette.primary,
     backgroundGradient2: palette.secondary,
+    softText: palette.gray1,
     mainBackground: palette.white,
     mainForeground: palette.black,
-    text: palette.gray4,
+    text: palette.white,
     boldText: palette.black,
     button: palette.primary,
     headerBackground: palette.primary,
@@ -55,12 +56,19 @@ const theme = createTheme({
     tablet: 768
   },
   textVariants: {
-    screenHeader: {
+    screenHeaderLine1: {
+      fontFamily: "System",
+      fontWeight: "normal",
+      fontSize: 16,
+      lineHeight: 18,
+      color: "softText"
+    },
+    screenHeaderLine2: {
       fontFamily: "System",
       fontWeight: "bold",
-      fontSize: 22,
-      lineHeight: 26,
-      color: "mainBackground"
+      fontSize: 20,
+      lineHeight: 24,
+      color: "text"
     },
     header: {
       fontFamily: "System",

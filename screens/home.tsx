@@ -15,10 +15,7 @@ const styles = StyleSheet.create({
 function Home(): JSX.Element {
   return (
     <ScreenBackground color1="backgroundGradient1" color2="backgroundGradient2">
-      <SafeAreaView
-        edges={["right", "left", "bottom"]}
-        style={styles.container}
-      >
+      <SafeAreaView edges={["right", "left"]} style={styles.container}>
         <StatusBar barStyle="light-content" />
         <HeaderHeightContext.Consumer>
           {(headerHeight): JSX.Element => (
@@ -26,6 +23,7 @@ function Home(): JSX.Element {
               style={{
                 marginTop: headerHeight
               }}
+              indicatorStyle="white"
             >
               <Text style={styles.text}>hello world</Text>
               <Text style={styles.text}>hello world</Text>
