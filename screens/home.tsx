@@ -1,37 +1,23 @@
 import { HeaderHeightContext } from "@react-navigation/elements";
 import * as React from "react";
-import { ScrollView, StatusBar, StyleSheet, Text } from "react-native";
-import LinearGradient from "react-native-linear-gradient";
+import { ScrollView, StatusBar, StyleSheet } from "react-native";
 import { SafeAreaView } from "react-native-safe-area-context";
+import ScreenBackground from "../style-system/screen-background";
+import Text from "../style-system/text";
 
 const styles = StyleSheet.create({
   container: {
     flex: 1
-  },
-  linearGradient: {
-    flex: 1,
-    backgroundColor: "#151B29"
   },
   text: { fontSize: 40, color: "#FFF" }
 });
 
 function Home(): JSX.Element {
   return (
-    <LinearGradient
-      // colors={["#101D3F", "#101D3F", "#192f6a"]}
-      start={{ x: 0.2, y: 0.2 }}
-      end={{ x: 1, y: 1.0 }}
-      colors={["rgba(46, 35, 104, 0)", "rgba(46, 35, 104, .5)"]}
-      style={styles.linearGradient}
-    >
+    <ScreenBackground color1="backgroundGradient1" color2="backgroundGradient2">
       <SafeAreaView
         edges={["right", "left", "bottom"]}
-        style={[
-          styles.container,
-          {
-            // backgroundColor: theme.colors.mainBackground
-          }
-        ]}
+        style={styles.container}
       >
         <StatusBar barStyle="light-content" />
         <HeaderHeightContext.Consumer>
@@ -65,7 +51,7 @@ function Home(): JSX.Element {
           )}
         </HeaderHeightContext.Consumer>
       </SafeAreaView>
-    </LinearGradient>
+    </ScreenBackground>
   );
 }
 

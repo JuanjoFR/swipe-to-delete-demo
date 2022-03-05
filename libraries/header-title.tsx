@@ -1,11 +1,12 @@
 import * as React from "react";
-import { Text, View } from "react-native";
+import { View } from "react-native";
+import Text from "../style-system/text";
 
 function HeaderTitle(): JSX.Element {
   return (
     <View>
-      <Text>line one</Text>
-      <Text>line two</Text>
+      <Text>Hi, Natasyah</Text>
+      <Text>Monday, 28</Text>
     </View>
   );
 }

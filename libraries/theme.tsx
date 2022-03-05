@@ -1,6 +1,8 @@
 import { createTheme } from "@shopify/restyle";
 
 const palette = {
+  primary: "#151B29",
+  secondary: "#2e2368",
   purpleLight: "#8C6FF7",
   purplePrimary: "#5A31F4",
   purpleDark: "#3F22AB",
@@ -9,7 +11,7 @@ const palette = {
   greenPrimary: "#0ECD9D",
   greenDark: "#0A906E",
 
-  primary: "#350D37",
+  // primary: "#350D37",
   black: "#000",
   white: "#FFF",
   gray1: "#DDDDDD",
@@ -20,6 +22,8 @@ const palette = {
 };
 const theme = createTheme({
   colors: {
+    backgroundGradient1: palette.primary,
+    backgroundGradient2: palette.secondary,
     mainBackground: palette.white,
     mainForeground: palette.black,
     text: palette.gray4,
@@ -89,4 +93,5 @@ const theme = createTheme({
   }
 });
 
+export type Theme = typeof theme;
 export default theme;
