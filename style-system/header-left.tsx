@@ -16,11 +16,9 @@ function HeaderLeft({
     <Pressable onPress={handlePress}>
       {({ pressed }): JSX.Element => (
         <Box
-          marginLeft="m"
+          padding="l"
           alignItems="center"
           justifyContent="center"
-          width={48}
-          height={48}
           opacity={pressed ? pressOpacity : 1}
         >
           <Icon name="menu-outline" size={25} color={tintColor} />

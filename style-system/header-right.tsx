@@ -19,7 +19,7 @@ function HeaderRight({ pressOpacity, avatarSource }: Props): JSX.Element {
   return (
     <Pressable onPress={handlePress}>
       {({ pressed }): JSX.Element => (
-        <Box marginRight="m" opacity={pressed ? pressOpacity : 1}>
+        <Box padding="l" opacity={pressed ? pressOpacity : 1}>
           <Image
             source={avatarSource}
             width={45}

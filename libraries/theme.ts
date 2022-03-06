@@ -16,8 +16,8 @@ const palette = {
   black: "#000",
   white: "#FFF",
   gray1: "#8A8C98",
-  gray2: "#606060",
-  gray3: "#868686",
+  gray2: "#2B334A",
+  gray3: "#5C6272",
   gray4: "#616061",
   gray5: "#F8F8F8"
 };
@@ -27,6 +27,8 @@ const theme = createTheme({
     backgroundGradient2: palette.secondary,
     backgroundGradient3: palette.tertiary,
     softText: palette.gray1,
+    inputBackground: palette.gray2,
+    inputColor: palette.gray3,
     mainBackground: palette.white,
     mainForeground: palette.black,
     text: palette.white,
@@ -71,6 +73,12 @@ const theme = createTheme({
       fontSize: 20,
       lineHeight: 24,
       color: "text"
+    },
+    input: {
+      fontFamily: "System",
+      fontWeight: "normal",
+      fontSize: 16,
+      lineHeight: 18
     },
     header: {
       fontFamily: "System",
