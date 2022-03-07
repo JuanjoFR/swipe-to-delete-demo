@@ -4,13 +4,17 @@ const palette = {
   primary: "#101d40",
   secondary: "#151a2d",
   tertiary: "#2d2267",
+  purpleDark: "#753E82",
+  blueDark: "#545AAA",
+  greenDark: "#49817B",
+  brownDark: "#883F1B",
+  grayDark: "#807382",
+
   purpleLight: "#8C6FF7",
   purplePrimary: "#5A31F4",
-  purpleDark: "#3F22AB",
 
   greenLight: "#56DCBA",
   greenPrimary: "#0ECD9D",
-  greenDark: "#0A906E",
 
   // primary: "#350D37",
   black: "#000",
@@ -29,6 +33,16 @@ const theme = createTheme({
     softText: palette.gray1,
     inputBackground: palette.gray2,
     inputColor: palette.gray3,
+    progressBarBackground: palette.black,
+    progressBarForeground: palette.white,
+    labelBackground: palette.white,
+    bigLabelForeground: palette.black,
+    taskProgressCardForeground1: palette.purpleDark,
+    taskProgressCardForeground2: palette.blueDark,
+    taskProgressCardForeground3: palette.greenDark,
+    taskProgressCardForeground4: palette.brownDark,
+    taskProgressCardForeground5: palette.grayDark,
+
     mainBackground: palette.white,
     mainForeground: palette.black,
     text: palette.white,
@@ -83,16 +97,16 @@ const theme = createTheme({
     header: {
       fontFamily: "System",
       fontWeight: "bold",
-      fontSize: 16,
+      fontSize: 20,
       lineHeight: 24,
-      color: "mainForeground"
+      color: "text"
     },
     subheader: {
       fontFamily: "System",
-      fontWeight: "600",
-      fontSize: 28,
-      lineHeight: 36,
-      color: "mainForeground"
+      fontWeight: "normal",
+      fontSize: 20,
+      lineHeight: 24,
+      color: "text"
     },
     body: {
       fontFamily: "System",
@@ -107,6 +121,37 @@ const theme = createTheme({
       fontSize: 16,
       lineHeight: 24,
       color: "boldText"
+    },
+    label: {
+      fontFamily: "System",
+      fontWeight: "300",
+      fontSize: 11,
+      lineHeight: 13,
+      color: "text"
+    },
+    bigLabel: {
+      fontFamily: "System",
+      fontWeight: "bold",
+      fontSize: 11,
+      lineHeight: 13,
+      color: "bigLabelForeground"
+    }
+  },
+  taskProgressVariants: {
+    "1": {
+      backgroundColor: "taskProgressCardForeground1"
+    },
+    "2": {
+      backgroundColor: "taskProgressCardForeground2"
+    },
+    "3": {
+      backgroundColor: "taskProgressCardForeground3"
+    },
+    "4": {
+      backgroundColor: "taskProgressCardForeground4"
+    },
+    "5": {
+      backgroundColor: "taskProgressCardForeground5"
     }
   }
 });
