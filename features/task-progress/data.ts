@@ -1,10 +1,5 @@
 import { faker } from "@faker-js/faker";
-
-function getRandomInt(min: number, max: number): number {
-  min = Math.ceil(min);
-  max = Math.floor(max);
-  return Math.floor(Math.random() * (max - min + 1)) + min;
-}
+import { getRandomInt } from "../../libraries/utlilities";
 
 export function getTasksProgress(): Array<{
   id: string;
@@ -25,7 +20,7 @@ export function getTasksProgress(): Array<{
 
   for (let i = 0; i < count; i += 1) {
     data.push({
-      id: (i + 1).toString(),
+      id: faker.datatype.uuid(),
       variant: getRandomInt(1, 5).toString(),
       date: faker.date.recent(500),
       name: faker.lorem.sentence(),

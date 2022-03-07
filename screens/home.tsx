@@ -7,9 +7,9 @@ import {
   useSafeAreaInsets
 } from "react-native-safe-area-context";
 import TaskProgressList from "../features/task-progress/task-progress-list";
+import TasksList from "../features/task/tasks-list";
 import ScreenBackground from "../style-system/screen-background";
 import SearchInput from "../style-system/search-input";
-import Text from "../style-system/text";
 
 const styles = StyleSheet.create({
   container: {
@@ -66,27 +66,11 @@ function Home(): JSX.Element {
                   marginTop="s"
                   marginBottom="xl"
                 />
-                <TaskProgressList onPress={handleTaskProgressPress} />
-                <Text style={styles.text}>hello world</Text>
-                <Text style={styles.text}>hello world</Text>
-                <Text style={styles.text}>hello world</Text>
-                <Text style={styles.text}>hello world</Text>
-                <Text style={styles.text}>hello world</Text>
-                <Text style={styles.text}>hello world</Text>
-                <Text style={styles.text}>hello world</Text>
-                <Text style={styles.text}>hello world</Text>
-                <Text style={styles.text}>hello world</Text>
-                <Text style={styles.text}>hello world</Text>
-                <Text style={styles.text}>hello world</Text>
-                <Text style={styles.text}>hello world</Text>
-                <Text style={styles.text}>hello world</Text>
-                <Text style={styles.text}>hello world</Text>
-                <Text style={styles.text}>hello world</Text>
-                <Text style={styles.text}>hello world</Text>
-                <Text style={styles.text}>hello world</Text>
-                <Text style={styles.text}>hello world</Text>
-                <Text style={styles.text}>hello world</Text>
-                <Text style={styles.text}>hello world</Text>
+                <TaskProgressList
+                  onPress={handleTaskProgressPress}
+                  marginBottom="l"
+                />
+                <TasksList />
               </KeyboardAwareScrollView>
             </ScrollView>
           )}

@@ -5,15 +5,16 @@ const palette = {
   secondary: "#151a2d",
   tertiary: "#2d2267",
   purpleDark: "#753E82",
+  purpleLight: "#6D5CCE",
   blueDark: "#545AAA",
+  blueDarker: "#282A51",
   greenDark: "#49817B",
+  greenLight: "#22bdbb",
   brownDark: "#883F1B",
   grayDark: "#807382",
 
-  purpleLight: "#8C6FF7",
   purplePrimary: "#5A31F4",
 
-  greenLight: "#56DCBA",
   greenPrimary: "#0ECD9D",
 
   // primary: "#350D37",
@@ -42,6 +43,9 @@ const theme = createTheme({
     taskProgressCardForeground3: palette.greenDark,
     taskProgressCardForeground4: palette.brownDark,
     taskProgressCardForeground5: palette.grayDark,
+    taskCardBarckground: palette.blueDarker,
+    checkmarkBackground: palette.greenLight,
+    dot: palette.purpleLight,
 
     mainBackground: palette.white,
     mainForeground: palette.black,

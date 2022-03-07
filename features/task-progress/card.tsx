@@ -14,7 +14,6 @@ import Text from "../../style-system/text";
 type Props = {
   data: {
     id: string;
-    variant: string;
     date: Date;
     name: string;
     progress: number;

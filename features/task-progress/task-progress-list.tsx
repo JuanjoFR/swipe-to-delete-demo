@@ -13,11 +13,11 @@ type Props = {
 
 const data = getTasksProgress();
 
-function TaskProgressList({ onPress }: Props): JSX.Element {
+function TaskProgressList({ onPress, ...rest }: Props): JSX.Element {
   const theme = useTheme<Theme>();
 
   return (
-    <Box>
+    <Box {...rest}>
       <Text variant="subheader" marginHorizontal="l" marginBottom="m">
         <Text>Progress </Text>
         <Text color="softText">{`(${data.length})`}</Text>
