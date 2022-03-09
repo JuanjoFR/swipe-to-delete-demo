@@ -3,7 +3,10 @@ import { getRandomInt } from "../../libraries/utlilities";
 
 export function getTasksProgress(): Array<{
   id: string;
+  // variant: VariantProps<Theme, "taskProgressVariants">;
   variant: string;
+  // variant: ResponsiveValue<keyof Theme["taskProgressVariants"], Theme>;
+  // variant: VariantProps<Theme, "taskProgressVariants">;
   date: Date;
   name: string;
   progress: number;

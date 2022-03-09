@@ -23,12 +23,13 @@ const styles = StyleSheet.create({
     flexGrow: 1
   }
 });
+// TODO get data here, create refs for every task and send to children
 
 function Home(): JSX.Element {
   const insets = useSafeAreaInsets();
 
   function handleTaskProgressPress(id: string): void {
-    Alert.alert(`Go to task progress ${id}`);
+    Alert.alert(`Open task progress ${id} menu`);
   }
 
   return (

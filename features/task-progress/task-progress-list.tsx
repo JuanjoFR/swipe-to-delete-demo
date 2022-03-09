@@ -34,7 +34,7 @@ function TaskProgressList({ onPress, ...rest }: Props): JSX.Element {
               key={item.id}
               variant={item.variant}
               data={item}
-              onPress={onPress}
+              onPress={(): void => onPress(item.id)}
             />
           )
         )}

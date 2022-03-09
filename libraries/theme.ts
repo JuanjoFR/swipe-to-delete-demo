@@ -12,6 +12,7 @@ const palette = {
   greenLight: "#22bdbb",
   brownDark: "#883F1B",
   grayDark: "#807382",
+  red: "#E94C4C",
 
   purplePrimary: "#5A31F4",
 
@@ -46,6 +47,7 @@ const theme = createTheme({
     taskCardBarckground: palette.blueDarker,
     checkmarkBackground: palette.greenLight,
     dot: palette.purpleLight,
+    danger: palette.red,
 
     mainBackground: palette.white,
     mainForeground: palette.black,

@@ -1,7 +1,8 @@
-import { SpacingProps, useTheme, VariantProps } from "@shopify/restyle";
+import { BoxProps, useTheme, VariantProps } from "@shopify/restyle";
 import { format } from "date-fns";
 import * as React from "react";
-import { Pressable, StyleSheet } from "react-native";
+import { StyleSheet } from "react-native";
+import { BorderlessButton } from "react-native-gesture-handler";
 import Icon from "react-native-vector-icons/Ionicons";
 import type { Theme } from "../../libraries/theme";
 import AvatarsList from "../../style-system/avatars-list";
@@ -25,8 +26,8 @@ type Props = {
     }>;
     daysLeft: number;
   };
-  onPress: (id: string) => void;
-} & SpacingProps<Theme> &
+  onPress: () => void;
+} & BoxProps<Theme> &
   VariantProps<Theme, "taskProgressVariants">;
 
 const styles = StyleSheet.create({
@@ -36,48 +37,36 @@ const styles = StyleSheet.create({
   title: { minHeight: 46 }
 });
 
-function Card({ variant, data, onPress, ...rest }: Props): JSX.Element {
+function Card({ data, onPress, ...rest }: Props): JSX.Element {
   const theme = useTheme<Theme>();
 
   return (
     <TaskProgressCard
-      key={data.id}
-      variant={variant}
+      {...rest}
       width={150}
       // height={160}
       backgroundColor="buttonPrimaryBackground"
       marginHorizontal="s"
       borderRadius={16}
       padding="s"
-      {...rest}
     >
       <Box
         flexDirection="row"
         alignItems="center"
         justifyContent="space-between"
-        marginBottom="m"
       >
-        <Text variant="label">{format(data.date, "PP")}</Text>
-        <Pressable
-          onPress={(): void => onPress(data.id)}
-          style={[styles.iconContainer, { right: theme.spacing.s * -1 }]}
-        >
-          {({ pressed }): JSX.Element => (
-            <Box
-              width={44}
-              height={44}
-              alignItems="center"
-              justifyContent="center"
-            >
-              <Icon
-                name="ellipsis-vertical"
-                size={14}
-                color={theme.colors.text}
-                style={pressed ? styles.iconPressed : styles.iconUnpressed}
-              />
-            </Box>
-          )}
-        </Pressable>
+        <Text variant="label" marginBottom="m">
+          {format(data.date, "PP")}
+        </Text>
+        <BorderlessButton onPress={onPress}>
+          <Box alignItems="center" justifyContent="center" marginBottom="m">
+            <Icon
+              name="ellipsis-vertical"
+              size={14}
+              color={theme.colors.text}
+            />
+          </Box>
+        </BorderlessButton>
       </Box>
       <Text
         variant="header"
