@@ -7,17 +7,15 @@ import Text from "../../style-system/text";
 import Card from "./card";
 import { getTasksProgress } from "./data";
 
-type Props = {
-  onPress: (id: string) => void;
-} & BoxProps<Theme>;
+type Props = BoxProps<Theme>;
 
 const data = getTasksProgress();
 
-function TaskProgressList({ onPress, ...rest }: Props): JSX.Element {
+function TaskProgressList(props: Props): JSX.Element {
   const theme = useTheme<Theme>();
 
   return (
-    <Box {...rest}>
+    <Box {...props}>
       <Text variant="subheader" marginHorizontal="l" marginBottom="m">
         <Text>Progress </Text>
         <Text color="softText">{`(${data.length})`}</Text>
@@ -30,12 +28,7 @@ function TaskProgressList({ onPress, ...rest }: Props): JSX.Element {
       >
         {data.map(
           (item): JSX.Element => (
-            <Card
-              key={item.id}
-              variant={item.variant}
-              data={item}
-              onPress={(): void => onPress(item.id)}
-            />
+            <Card key={item.id} variant={item.variant} data={item} />
           )
         )}
       </ScrollView>

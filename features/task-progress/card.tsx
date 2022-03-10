@@ -2,7 +2,6 @@ import { BoxProps, useTheme, VariantProps } from "@shopify/restyle";
 import { format } from "date-fns";
 import * as React from "react";
 import { StyleSheet } from "react-native";
-import { BorderlessButton } from "react-native-gesture-handler";
 import Icon from "react-native-vector-icons/Ionicons";
 import type { Theme } from "../../libraries/theme";
 import AvatarsList from "../../style-system/avatars-list";
@@ -26,7 +25,6 @@ type Props = {
     }>;
     daysLeft: number;
   };
-  onPress: () => void;
 } & BoxProps<Theme> &
   VariantProps<Theme, "taskProgressVariants">;
 
@@ -37,7 +35,7 @@ const styles = StyleSheet.create({
   title: { minHeight: 46 }
 });
 
-function Card({ data, onPress, ...rest }: Props): JSX.Element {
+function Card({ data, ...rest }: Props): JSX.Element {
   const theme = useTheme<Theme>();
 
   return (
@@ -54,19 +52,12 @@ function Card({ data, onPress, ...rest }: Props): JSX.Element {
         flexDirection="row"
         alignItems="center"
         justifyContent="space-between"
+        marginBottom="m"
       >
-        <Text variant="label" marginBottom="m">
-          {format(data.date, "PP")}
-        </Text>
-        <BorderlessButton onPress={onPress}>
-          <Box alignItems="center" justifyContent="center" marginBottom="m">
-            <Icon
-              name="ellipsis-vertical"
-              size={14}
-              color={theme.colors.text}
-            />
-          </Box>
-        </BorderlessButton>
+        <Text variant="label">{format(data.date, "PP")}</Text>
+        <Box alignItems="center" justifyContent="center">
+          <Icon name="ellipsis-vertical" size={14} color={theme.colors.text} />
+        </Box>
       </Box>
       <Text
         variant="header"

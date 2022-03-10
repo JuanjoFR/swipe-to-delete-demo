@@ -11,8 +11,11 @@ const today = new Date();
 
 function HeaderTitle({ profileName }: Props): JSX.Element {
   return (
-    <Box alignItems={"center"} justifyContent="center">
-      <Text variant="screenHeaderLine1">{`Hi, ${profileName}`}</Text>
+    <Box>
+      <Text
+        textAlign="center"
+        variant="screenHeaderLine1"
+      >{`Hi, ${profileName}`}</Text>
       <Text variant="screenHeaderLine2" marginTop="s">
         {format(today, "EEEE, dd")}
       </Text>

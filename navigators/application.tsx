@@ -23,6 +23,7 @@ function Application(): JSX.Element {
     <Stack.Navigator
       screenOptions={{
         headerTransparent: true,
+        headerTitleAlign: "center",
         headerTitle: (props: HeaderTitleProps) =>
           React.createElement(HeaderTitle, { ...props, profileName }),
         headerStyle: styles.header,

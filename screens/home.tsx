@@ -1,6 +1,6 @@
 import { HeaderHeightContext } from "@react-navigation/elements";
 import * as React from "react";
-import { Alert, ScrollView, StatusBar, StyleSheet } from "react-native";
+import { ScrollView, StatusBar, StyleSheet } from "react-native";
 import { KeyboardAwareScrollView } from "react-native-keyboard-aware-scroll-view";
 import {
   SafeAreaView,
@@ -27,10 +27,6 @@ const styles = StyleSheet.create({
 
 function Home(): JSX.Element {
   const insets = useSafeAreaInsets();
-
-  function handleTaskProgressPress(id: string): void {
-    Alert.alert(`Open task progress ${id} menu`);
-  }
 
   return (
     <ScreenBackground
@@ -67,10 +63,7 @@ function Home(): JSX.Element {
                   marginTop="s"
                   marginBottom="xl"
                 />
-                <TaskProgressList
-                  onPress={handleTaskProgressPress}
-                  marginBottom="l"
-                />
+                <TaskProgressList marginBottom="l" />
                 <TasksList />
               </KeyboardAwareScrollView>
             </ScrollView>
