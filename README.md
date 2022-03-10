@@ -2,7 +2,10 @@
 
 This project is a demo with the main goal of implementing the [swipe to delete] functionality with a beautiful design in a list of elements with horizontal scrolling.
 
-Here you can see some animations to see the result without downloading and compiling the project:
+Here you can see some videos to see the result without downloading and compiling the project:
+
+- [iOS video]
+- [Android video]
 
 One of the best ways to learn and improve is by sharing knowledge, so you can use this project to study and improve. I hope you find it useful!
 
@@ -27,3 +30,5 @@ The design is an application concept for task management by Iqbal Surya:
 [react native gesture handler]: https://docs.swmansion.com/react-native-gesture-handler/docs/
 [reanimated]: https://docs.swmansion.com/react-native-reanimated/
 [task management mobile app by iqbal surya]: https://dribbble.com/shots/16586781-Task-Management-mobile-App
+[ios video]: https://vimeo.com/686795719
+[android video]: https://vimeo.com/686795682
