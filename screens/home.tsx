@@ -1,12 +1,13 @@
 import { HeaderHeightContext } from "@react-navigation/elements";
 import * as React from "react";
-import { ScrollView, StatusBar, StyleSheet } from "react-native";
+import { Alert, ScrollView, StatusBar, StyleSheet } from "react-native";
 import { KeyboardAwareScrollView } from "react-native-keyboard-aware-scroll-view";
 import {
   SafeAreaView,
   useSafeAreaInsets
 } from "react-native-safe-area-context";
 import TaskProgressList from "../features/task-progress/task-progress-list";
+import CreateTaskButton from "../features/task/create-task-button";
 import TasksList from "../features/task/tasks-list";
 import ScreenBackground from "../style-system/screen-background";
 import SearchInput from "../style-system/search-input";
@@ -23,10 +24,13 @@ const styles = StyleSheet.create({
     flexGrow: 1
   }
 });
-// TODO get data here, create refs for every task and send to children
 
 function Home(): JSX.Element {
   const insets = useSafeAreaInsets();
+
+  function handleCreateTaskPress(): void {
+    Alert.alert("Go to create task screen");
+  }
 
   return (
     <ScreenBackground
@@ -69,6 +73,7 @@ function Home(): JSX.Element {
             </ScrollView>
           )}
         </HeaderHeightContext.Consumer>
+        <CreateTaskButton onPress={handleCreateTaskPress} />
       </SafeAreaView>
     </ScreenBackground>
   );

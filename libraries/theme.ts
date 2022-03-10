@@ -13,19 +13,14 @@ const palette = {
   brownDark: "#883F1B",
   grayDark: "#807382",
   red: "#E94C4C",
-
+  purpleBlue: "#4D33BA",
+  pink: "#7012A4",
   purplePrimary: "#5A31F4",
-
-  greenPrimary: "#0ECD9D",
-
-  // primary: "#350D37",
   black: "#000",
   white: "#FFF",
   gray1: "#8A8C98",
   gray2: "#2B334A",
-  gray3: "#5C6272",
-  gray4: "#616061",
-  gray5: "#F8F8F8"
+  gray3: "#5C6272"
 };
 const theme = createTheme({
   colors: {
@@ -48,26 +43,12 @@ const theme = createTheme({
     checkmarkBackground: palette.greenLight,
     dot: palette.purpleLight,
     danger: palette.red,
-
-    mainBackground: palette.white,
-    mainForeground: palette.black,
-    text: palette.white,
-    boldText: palette.black,
-    button: palette.primary,
-    headerBackground: palette.primary,
-    cardPrimaryBackground: palette.purplePrimary,
-    buttonPrimaryBackground: palette.purplePrimary,
-    tabBarActiveTint: palette.black,
-    tabBarInactiveTint: palette.gray3,
-    inputBorder: palette.gray1,
-    listItemPressRegular: palette.gray1,
-    listItemPressBold: palette.gray5,
-    inputPress: palette.gray1,
+    leadButtonTopBackground: palette.purpleBlue,
+    leadButtonBottomBackground: palette.pink,
+    leadButtonForeground: palette.white,
     placeholderText: palette.gray2,
-    separator: palette.gray1,
-    iconBackground: palette.gray1,
-    icon: palette.gray4,
-    iconBold: palette.greenLight
+    buttonPrimaryBackground: palette.purplePrimary,
+    text: palette.white
   },
   spacing: {
     s: 8,
@@ -75,10 +56,7 @@ const theme = createTheme({
     l: 24,
     xl: 40
   },
-  breakpoints: {
-    phone: 0,
-    tablet: 768
-  },
+  breakpoints: {},
   textVariants: {
     screenHeaderLine1: {
       fontFamily: "System",
@@ -120,13 +98,6 @@ const theme = createTheme({
       fontSize: 16,
       lineHeight: 24,
       color: "text"
-    },
-    boldBody: {
-      fontFamily: "System",
-      fontWeight: "bold",
-      fontSize: 16,
-      lineHeight: 24,
-      color: "boldText"
     },
     label: {
       fontFamily: "System",
