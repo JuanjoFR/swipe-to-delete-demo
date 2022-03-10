@@ -1,7 +1,24 @@
 {
   "name": "swipetodeletedemo",
+  "description": "React Native swipe to delete demo",
+  "keywords": [
+    "react-native",
+    "typescript",
+    "application",
+    "ios",
+    "android",
+    "restyle"
+  ],
   "version": "0.0.1",
-  "private": true,
+  "author": {
+    "name": "Juanjo Fernandez",
+    "email": "juanjo.fernandez@haa.st",
+    "url": "https://haa.st"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git@github.com:JuanjoFR/swipte-to-delete-demo.git"
+  },
   "scripts": {
     "android": "react-native run-android",
     "ios": "react-native run-ios",
