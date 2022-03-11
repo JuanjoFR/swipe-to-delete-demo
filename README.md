@@ -1,5 +1,9 @@
 # Swipe to delete demo
 
+![Swipe to delete demo image 1](/assets/images/Optimized-IMG_6566.PNG)
+
+![Swipe to delete demo image 2](/assets/images/Optimized-IMG_6567.PNG)
+
 This project is a demo with the main goal of implementing the [swipe to delete] functionality with a beautiful design in a list of elements with horizontal scrolling.
 
 Here you can see some videos to see the result without downloading and compiling the project:
