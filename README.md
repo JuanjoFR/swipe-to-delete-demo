@@ -8,8 +8,13 @@ This project is a demo with the main goal of implementing the [swipe to delete] 
 
 Here you can see some videos to see the result without downloading and compiling the project:
 
-- [iOS video]
-- [Android video]
+iOS:
+
+https://user-images.githubusercontent.com/978229/158076289-8f4b336e-c1ec-4bc6-8f10-e14a5f7ab6e6.mov
+
+Android:
+
+https://user-images.githubusercontent.com/978229/158076309-0f5f306a-6cde-4b8b-9831-2dea87868ba6.mov
 
 One of the best ways to learn and improve is by sharing knowledge, so you can use this project to study and improve. I hope you find it useful!
 
