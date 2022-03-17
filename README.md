@@ -39,5 +39,3 @@ The design is an application concept for task management by Iqbal Surya:
 [react native gesture handler]: https://docs.swmansion.com/react-native-gesture-handler/docs/
 [reanimated]: https://docs.swmansion.com/react-native-reanimated/
 [task management mobile app by iqbal surya]: https://dribbble.com/shots/16586781-Task-Management-mobile-App
-[ios video]: https://vimeo.com/686795719
-[android video]: https://vimeo.com/686795682
